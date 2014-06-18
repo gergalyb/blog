@@ -6,6 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		
+		<?php
+			require("config.php");
+			require("functions.php");
+
+			checklogin();
+		?>
 	</body>
 </html>
