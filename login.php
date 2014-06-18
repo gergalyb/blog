@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>login.php</title>
@@ -14,6 +15,14 @@
 			<input name="password" type="text" id="password">
 			<br>
 			<input type="submit" name="submit" value="Login">
+			<br>
+			<?php
+				if (isset($_SESSION['error']))
+				{
+					echo $_SESSION['error'];
+					$_SESSION['error']="";
+				}
+			?>
 		</form>
 	</body>
 </html>

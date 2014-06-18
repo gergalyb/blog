@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>home.php</title>
@@ -12,5 +13,6 @@
 
 			checklogin();
 		?>
+		<a href="logout.php">Logout</a>
 	</body>
 </html>

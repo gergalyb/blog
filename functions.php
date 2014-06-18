@@ -11,14 +11,9 @@
 
 	function checklogin()
 	{
-		session_start();
-		if($_SESSION['logged']==0)
+		if( $_SESSION['logged']==0)
 		{
-			header("location: login.php");
-		}
-		else
-		{
-			echo "welcome".$_SESSION['username'];
+			header("Location: login.php");
 		}
 	}
 ?>

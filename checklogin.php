@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>Checklogin.php</title>
@@ -18,13 +19,14 @@
 			if (mysqli_num_rows($result)==1)
 			{
 				$row=mysqli_fetch_array($result);
-				session_start();
 				$_SESSION['username']=$row['username'];
 				$_SESSION['logged']=1;
+				$_SESSION['error']="";
 				header("Location: home.php");
 			}
 			else
 			{
+				$_SESSION['error']="Wrong username or password!";
 				header("Location: login.php");
 			}
 		?>
