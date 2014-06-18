@@ -21,6 +21,7 @@
 				$row=mysqli_fetch_array($result);
 				$_SESSION['username']=$row['username'];
 				$_SESSION['logged']=1;
+				$_SESSION['admin']=$row['admin'];
 				$_SESSION['error']="";
 				header("Location: home.php");
 			}

@@ -16,4 +16,12 @@
 			header("Location: login.php");
 		}
 	}
+
+	function checkadmin()
+	{
+		if( $_SESSION['admin']==0)
+		{
+			header("Location: home.php");
+		}
+	}
 ?>
